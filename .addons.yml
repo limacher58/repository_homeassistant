@@ -2,6 +2,5 @@
 channel: stable
 addons:
   spotify:
-    repository: hassio-addons/addon-spotify-connect
+    repository: limacher58/addon-spotify-connect_more_options
     target: spotify
-    

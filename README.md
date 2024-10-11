@@ -1,4 +1,4 @@
-# Home Assistant Community Add-ons
+# Home Assistant Community Add-ons - David
 
 ![Project Stage][project-stage-shield]
 ![Maintenance][maintenance-shield]

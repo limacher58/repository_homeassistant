@@ -1,23 +1,42 @@
 name: Spotify Connect
-version: 0.13.0
+version: dev
 slug: spotify
 description: Play Spotify music on your Home Assistant device
-url: https://github.com/hassio-addons/addon-spotify-connect
+url: https://github.com/limacher58/addon-spotify-connect_more_options
 codenotary: codenotary@frenck.dev
 arch:
-- aarch64
-- amd64
-- armv7
+  - aarch64
+  - amd64
+  - armv7
 host_network: true
 audio: true
 init: false
 options:
   name: Home Assistant
   bitrate: 160
+  cache-size-limit: 0
+  disable-audio-cache: false
+  device-type: speaker
+  backend: auto
+  device: default
+  format: S16
+  dither: auto
+  initial-volume: 50
+  enable-volume-normalisation: true
+  autoplay: true
 schema:
   log_level: list(trace|debug|info|notice|warning|error|fatal)?
   name: str
   bitrate: list(96|160|320)
   username: str?
   password: password?
-image: ghcr.io/hassio-addons/spotify/{arch}
+  cache-size-limit: int
+  disable-audio-cache: bool
+  device-type: list(computer|tablet|smartphone|speaker|tv|avr|stb|audiodongle|gameconsole|castaudio|castvideo|automobile|smartwatch|chromebook|carthing|homething)
+  backend: str
+  device: str
+  format: list(F64|F32|S32|S24|S24_3|S16)
+  dither: str
+  initial-volume: int
+  enable-volume-normalisation: bool
+  autoplay: bool
